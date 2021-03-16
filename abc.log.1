@@ -1,0 +1,9 @@
+#! /bin/bash
+
+for file in *.log.1
+do
+        var=`date +"%FORMAT_STRING"`
+        now=`date +"%m_%d_%Y"`
+        now=`date +"%Y-%m-%d"`
+        mv -i $file "access.${now}.log"
+done
